@@ -4,6 +4,8 @@ require("dotenv").config();
 const app = express();
 const tasksRouter = require("./routes/tasks");
 
+// serve static files
+app.use(express.static("./public"));
 // middleware
 app.use(express.json());
 // routes
